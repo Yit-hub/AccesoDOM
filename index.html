@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Acceso al DOM</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 id="tituloPrincipal"></h1>
+    <p id="mensajeBienvenida"></p>
+
+    <!--Formulario-->
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="inputNombre">
+        <select id="colorUsuario">
+            <option value="">ninguno</option>
+            <option value="rojo">rojo</option>
+            <option value="azul">azul</option>
+            <option value="verde">verde</option>
+            <option value="amarillo">amarillo</option>  
+        </select>
+        <button type="submit" id="btnActualizarNombre">Actualizar mensaje bienvenida</button>
+    </form>
+
+    <!--Gestor de tareas-->
+
+    <ul id="listaTareas">
+        <li>Tarea 1</li>
+        <li>Tarea 2</li>
+        <li>Tarea 3</li>
+        <input type="text" id="inputTarea">
+        <button type="submit" id="btnAgregarTarea">Agregar nueva tarea</button>
+    </ul>
+
+    <!--Caja de información interactiva-->
+
+    <div class="cuadroInfo">
+        <p>"Pasar el ratón aquí para cambiar el color"</p>
+    </div>
+
+    <div class="cuadroInfo">
+        <P>Haz doble clic para ocultarme</P>
+    </div>
+
+
+    <!--Galería de Imágenes-->
+
+    <div id="galeria">
+
+        <img src="" alt="imagen 1" class="imagenGaleria">
+        <img src="" alt="imagen 2" class="imagenGaleria">
+        <img src="" alt="imagen 3" class="imagenGaleria">
+    </div>
+
+    <!--Botones de control de estilo-->
+    <button id="btnOcultarTareas"></button>
+    <button id="btnAlternarTema"></button>
+
+</body>
+
+</html>
