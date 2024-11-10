@@ -64,14 +64,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const LISTA = document.getElementById("listaTareas");
         const NUEVALISTA = document.createElement("li");
         const contenido = document.createTextNode(document.getElementById("inputTarea").value);
-        
+
         //if (contenido.trim() === "") return;
 
         NUEVALISTA.appendChild(contenido);
         LISTA.appendChild(NUEVALISTA);
 
         const BOTONELIMINAR = document.createElement("button");
-        BOTONELIMINAR.textContent = "Eliminar tarea";        
+        BOTONELIMINAR.textContent = "Eliminar tarea";
         LISTA.appendChild(BOTONELIMINAR);
 
         BOTONELIMINAR.addEventListener("click", function () {
@@ -82,8 +82,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         document.getElementById("inputTarea").value = "";
     });
-
-
-
 });
 
+/**
+ * Caja de información interactiva:
+■ Cambia el color de fondo de cada cuadroInfo cuando el ratón pase
+por encima (mouseover) y vuelve al color original al salir
+(mouseout).
+■ Al hacer doble clic (dblclick) en el segundo cuadroInfo, ocúltalo
+usando la propiedad style.display.
+ */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const CUADROINFO = document.querySelector(".cuadroInfo");
+
+    if (CUADROINFO){
+        CUADROINFO.addEventListener("mouseover", function () {
+            CUADROINFO.style.backgroundColor = "yellow";
+        });
+    
+        CUADROINFO.addEventListener("mouseout", function () {
+            CUADROINFO.style.backgroundColor = "";
+        });
+    }
+});
