@@ -67,20 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
         
         //if (contenido.trim() === "") return;
 
-
         NUEVALISTA.appendChild(contenido);
         LISTA.appendChild(NUEVALISTA);
 
         const BOTONELIMINAR = document.createElement("button");
-        BOTONELIMINAR.textContent = "Eliminar tarea";
-        
-
-
+        BOTONELIMINAR.textContent = "Eliminar tarea";        
         LISTA.appendChild(BOTONELIMINAR);
 
         BOTONELIMINAR.addEventListener("click", function () {
             if (LISTA.children.length > 0) {
                 LISTA.removeChild(NUEVALISTA);
+                LISTA.removeChild(BOTONELIMINAR);
             }
         });
         document.getElementById("inputTarea").value = "";
