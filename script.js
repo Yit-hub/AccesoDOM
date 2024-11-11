@@ -55,7 +55,6 @@ eliminar esa tarea de la lista.
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    //const TAREA = document.getElementById("inputTarea");
     const BTONAGREGARTAREA = document.getElementById("btnAgregarTarea");
 
     BTONAGREGARTAREA.addEventListener("click", function (event) {
@@ -65,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const NUEVALISTA = document.createElement("li");
         const contenido = document.createTextNode(document.getElementById("inputTarea").value);
 
-        //if (contenido.trim() === "") return;
+
 
         NUEVALISTA.appendChild(contenido);
         LISTA.appendChild(NUEVALISTA);
@@ -106,4 +105,40 @@ document.addEventListener("DOMContentLoaded", function() {
             CUADROINFO.style.backgroundColor = "";
         });
     }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+    const CUADROINFO2 = document.querySelectorAll(".cuadroInfo")[1];
+
+    CUADROINFO2.addEventListener("dblclick", function(){
+
+        CUADROINFO2.style.display = "none";
+    });
+
+});
+
+/**
+ * Galería de Imágenes:
+■ Agrega un evento click a cada imagen en galeria que permita
+ampliarla o reducirla al hacer clic. Puedes cambiar el ancho de la
+imagen (por ejemplo, entre 100px y 300px) cuando se haga clic
+sobre ella.
+ */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const IMAGENGALERIA = document.querySelectorAll("imagenGaleria");
+
+    IMAGENGALERIA.addEventListener("click", function(){
+
+        if(IMAGENGALERIA.style.width == '300px'){
+            IMAGENGALERIA.style.width = '100px';
+
+        }else{
+            IMAGENGALERIA.style.width = '300px';
+        }
+    });
+
 });
