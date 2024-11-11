@@ -133,12 +133,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
     IMAGENGALERIA.addEventListener("click", function(){
 
-        if(IMAGENGALERIA.style.width == '300px'){
-            IMAGENGALERIA.style.width = '100px';
+        if(IMAGENGALERIA.width == '300px'){
+           IMAGENGALERIA.width = '100px';
 
         }else{
-            IMAGENGALERIA.style.width = '300px';
+            IMAGENGALERIA.width = '300px';
         }
     });
 
+});
+
+
+/**
+ * ○ Botones de Control de Estilos:
+■ Al hacer clic en btnOcultarTareas, alterna entre ocultar y mostrar
+la lista de tareas completa (listaTareas).
+■ Al hacer clic en btnAlternarTema, cambia el estilo de la página
+entre un tema claro y oscuro, modificando el color de fondo y el color
+del texto.
+ */
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    const OCULTARTAREAS = document.getElementById("btnOcultarTareas");
+
+    OCULTARTAREAS.addEventListener("click", function(){
+
+        const LISTA = document.getElementById("listaTareas");
+        
+        if (LISTA.style.visibility == "visible"){
+
+            LISTA.style.visibility = "hidden";
+            OCULTARTAREAS.textContent = "Mostrar Tareas";
+
+        }else{
+            LISTA.style.visibility = "visible";
+
+            OCULTARTAREAS.textContent = "Ocultar Tareas";
+        }
+
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function(){
+
+    const CAMBIARTEMA = document.getElementById("btnAlternarTema");
+    CAMBIARTEMA.addEventListener("click", function(){
+
+        if(document.body.style.backgroundColor == "black"){
+
+            document.body.style.color = ""; 
+            document.body.style.backgroundColor = "white";
+
+        }else{
+
+            document.body.style.color = "white";
+            document.body.style.backgroundColor = "black";
+        }
+    });
 });
