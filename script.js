@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     IMAGENGALERIA.addEventListener("click", function(){
 
         if(IMAGENGALERIA.width == '300px'){
+            
            IMAGENGALERIA.width = '100px';
 
         }else{
