@@ -129,18 +129,20 @@ sobre ella.
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    const IMAGENGALERIA = document.querySelectorAll("imagenGaleria");
+    const IMAGENGALERIA = document.querySelectorAll(".imagenGaleria");
 
-    IMAGENGALERIA.addEventListener("click", function(){
+    IMAGENGALERIA.forEach(imagen =>{
+        imagen.addEventListener("click", function(){
 
-        if(IMAGENGALERIA.width == '300px'){
-            
-           IMAGENGALERIA.width = '100px';
-
-        }else{
-            IMAGENGALERIA.width = '300px';
-        }
-    });
+            if(imagen.width === 300){
+                
+               imagen.width = 100;
+    
+            }else{
+                imagen.width = 300;
+            }
+        });
+    })
 
 });
 
